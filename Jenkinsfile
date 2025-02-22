@@ -84,6 +84,7 @@ pipeline {
             }
             steps {
                 sh '''
+                   echo "Testing SCM deployment"
                    npm install netlify-cli
                    node_modules/.bin/netlify --version
                    echo "deploying to Production. Site id: $NETLIFY_SITE_ID"
